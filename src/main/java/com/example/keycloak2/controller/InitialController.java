@@ -11,7 +11,7 @@ import java.security.Principal;
 public class InitialController {
     @GetMapping(path = "/")
     public String welcome(){
-        String link = "<a href='http://localhost:8081/users'>Kliknij, żeby się zalogować</a>";
+        String link = "<a href='http://localhost:8082/users'>Kliknij, żeby się zalogować</a>";
 
         return "Witaj na stronie logowania systemu PROGRAMATOR " + "<br>" + link;
     }
@@ -19,7 +19,7 @@ public class InitialController {
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String login(Principal principal) {
-        String link = "<a href='http://localhost:8081/logout'>Kliknij, żeby się wylogować</a>";
+        String link = "<a href='http://localhost:8082/logout'>Kliknij, żeby się wylogować</a>";
 
         return principal.getName() +" witaj wewnątrz systemu PROGRAMATOR "+ "<br>" + link;
     }

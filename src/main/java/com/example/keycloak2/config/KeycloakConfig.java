@@ -30,9 +30,6 @@ public class KeycloakConfig extends KeycloakWebSecurityConfigurerAdapter {
         auth.authenticationProvider(keycloakAuthenticationProvider);
     }
 
-
-
-
     @Bean
     @Override
     protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {

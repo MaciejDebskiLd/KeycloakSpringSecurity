@@ -13,7 +13,7 @@ public class LogoutController {
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout (HttpServletRequest request) throws ServletException {
         request.logout();
-        String link = "<a href='http://localhost:8081/users'>Kliknij, żeby ponownie się zalogować</a>";
+        String link = "<a href='http://localhost:8082/users'>Kliknij, żeby ponownie się zalogować</a>";
 
         return "Zostałeś prawidłowo wylogowany" + "<br>" + link;
 
